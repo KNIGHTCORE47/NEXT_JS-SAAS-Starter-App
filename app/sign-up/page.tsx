@@ -29,7 +29,6 @@ export default function Signup() {
     const [error, setError] = React.useState("");
 
     const { signUp, isLoaded, setActive } = useSignUp();
-
     const router = useRouter();
 
 
@@ -58,9 +57,6 @@ export default function Signup() {
         } catch (error: any) {
             console.log(JSON.stringify(error, null, 2));
             setError(error.errors[0].message);
-
-
-
         }
     }
 
@@ -160,7 +156,10 @@ export default function Signup() {
                                     <AlertDescription>{error}</AlertDescription>
                                 </Alert>
                             )}
-                            <Button type="submit" className="w-full">
+                            <Button
+                                type="submit"
+                                className="w-full"
+                            >
                                 Sign Up
                             </Button>
                         </form>
