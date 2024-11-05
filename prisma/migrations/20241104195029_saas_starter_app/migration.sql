@@ -3,7 +3,7 @@ CREATE TABLE "User" (
     "id" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "isSubscribed" BOOLEAN NOT NULL DEFAULT false,
-    "subscriptionEnds" TIMESTAMP(3) NOT NULL,
+    "subscriptionEnds" TIMESTAMP(3),
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );
