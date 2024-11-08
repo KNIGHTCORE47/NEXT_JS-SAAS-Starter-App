@@ -154,11 +154,7 @@ export async function POST(request: NextRequest) {
 
 
         return NextResponse.json(
-            {
-                todo,
-                success: true,
-                message: 'A new todo has been created successfully.'
-            }, { status: 201 }
+            { todo }, { status: 201 }
         )
 
 
