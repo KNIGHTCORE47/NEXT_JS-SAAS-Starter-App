@@ -20,6 +20,7 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
 
         // //NOTE - find out the todo id from params
         const todoId = params.id;
+        const { completed } = await request.json();
 
         if (!todoId) {
             console.log("Missing todo id");
@@ -69,9 +70,7 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
                 where: {
                     id: todoId
                 },
-                data: {
-                    completed: !todo.completed
-                }
+                data: { completed }
             }
         )
 
